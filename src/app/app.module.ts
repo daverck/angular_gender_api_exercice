@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MCollapsibleDirective } from './directives/m-collapsible.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MCollapsibleDirective
   ],
   imports: [
     BrowserModule,
