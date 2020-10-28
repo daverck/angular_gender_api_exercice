@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Directive, ElementRef, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, EventEmitter, OnDestroy, Output } from '@angular/core';
 import * as M from 'materialize-css';
 
 @Directive({
@@ -34,6 +34,7 @@ export class MCollapsibleDirective implements AfterViewInit, OnDestroy {
     console.log(this.elRef.nativeElement); //Element HTML Standar
     this.instance = M.Collapsible.init(this.elRef.nativeElement);
 
+    //Déclanche l'évenement mInstance
     this.mInstance.emit(this.instance);
   }
 }

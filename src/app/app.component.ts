@@ -1,21 +1,14 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ContentChild } from '@angular/core';
+import { MCollapsibleDirective } from './directives/m-collapsible.directive';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit {
-  title = 'TechnobelFEAngular2';
+export class AppComponent {
+  mCarousel: M.Carousel;
 
-  mCollapsible: M.Collapsible;
+  mCarouselOptions: Partial<M.CarouselOptions> = {fullWidth: true, duration: 100};
 
-  
-  ngAfterViewInit(): void {
-    this.mCollapsible.open(0);
-  }
-
-  openOnglet(id: number) {
-    this.mCollapsible.open(id - 1);
-  }
 }

@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MCollapsibleDirective } from './directives/m-collapsible.directive';
+import { MCarouselDirective } from './directives/m-carousel.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MCollapsibleDirective
+    MCollapsibleDirective,
+    MCarouselDirective
   ],
   imports: [
     BrowserModule,
