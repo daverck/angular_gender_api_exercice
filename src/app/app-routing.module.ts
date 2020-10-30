@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 export const APP_ROUTING: Routes = [
-  {path: 'product', loadChildren: () => import("./modules/product/product.module").then(m => m.ProductModule)}
+  {path: 'product', data: {breadCrumb: "Product"}, loadChildren: () => import("./modules/product/product.module").then(m => m.ProductModule)}
 ];
 
 @NgModule({

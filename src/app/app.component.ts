@@ -10,8 +10,9 @@ import { CategoryType } from './models/enums/category-type.enum';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  color: string;
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    
   }
   
 }

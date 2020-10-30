@@ -12,7 +12,7 @@
         <!-- [] => Directive attributes ==> !!!dynamique -->
         <!-- () => Directive d'évenement -->
         <ng-container *ngFor="let product of products">
-        <tr *ngIf="product.inStock; else notInStock" [class]="{'new': product.state == 1}" [routerLink]="['/page2/page3', product.id]">
+        <tr *ngIf="product.inStock; else notInStock" [class]="{'new': product.state == 1}" [routerLink]="['./', product.title]">
             <!-- {{}} => binding One-Way -->
             <!-- ([ngModel]) => binding Two-Way -->
             <!-- #xxx => binding local -->

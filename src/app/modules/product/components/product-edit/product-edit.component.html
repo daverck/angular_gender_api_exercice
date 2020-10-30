@@ -1,1 +1,12 @@
 <p>product-edit works!</p>
+
+<form *ngIf="product as p">
+    <div class="input-field">
+        <input type="number" name="id" id="id" [(ngModel)]="p.id">
+        <label for="id">ID</label>
+    </div>
+    <div class="input-field">
+        <input type="text" name="title" id="title" [(ngModel)]="p.title">
+        <label for="title">Title</label>
+    </div>
+</form>

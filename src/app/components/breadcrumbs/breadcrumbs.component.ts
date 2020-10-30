@@ -18,6 +18,7 @@ export class BreadcrumbsComponent implements OnInit {
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
 
   }
+  
   ngOnInit(): void {
     this.router.events.pipe(
       filter(e => e instanceof NavigationEnd),
@@ -30,7 +31,7 @@ export class BreadcrumbsComponent implements OnInit {
   buildLinks(route: ActivatedRoute, url: string = "", links: BreadCrumbs = []): BreadCrumbs {
     let label = route.routeConfig && route.routeConfig.data ? route.routeConfig.data.breadCrumb : '';
     let path = route.routeConfig && route.routeConfig.data ? route.routeConfig.path : '';
-   
+
     const nextUrl = path ? `${url}/${path}`: url;
 
     const newBreadCrumbs = label ? [...links, {path, label}] : [...links];
