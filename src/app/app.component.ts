@@ -1,5 +1,6 @@
 import { Component, AfterViewInit, ViewChild, ContentChild } from '@angular/core';
 import { MCollapsibleDirective } from './directives/m-collapsible.directive';
+import { Produit } from './models';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,6 @@ import { MCollapsibleDirective } from './directives/m-collapsible.directive';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  mCarousel: M.Carousel;
-
-  mCarouselOptions: Partial<M.CarouselOptions> = {fullWidth: true, duration: 100};
+  products: Array<Produit> = [];
 
 }
