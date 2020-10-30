@@ -12,7 +12,7 @@ export class Produit {
     inStock: boolean;
 
     constructor(obj?: Produit) {
-        console.log(obj);
+        // console.log(obj);
         this.id = obj && obj.id || 0; //Si j'ai un obj != null && que cet obj possède un id && que l'id != null alors renvoi l'id sinon 0
         this.title = obj && obj.title || "";
         this.shortDescription = obj && obj.shortDescription || "";

@@ -15,20 +15,20 @@
     <div class="right"><i class="material-icons large" (click)="mCarousel.next()">chevron_right</i></div>
   </div>
 </div> -->
-
+<!-- <app-breadcrumbs></app-breadcrumbs> -->
+<ul>
+  <li><a routerLink="/page2">Page 2</a></li>
+  <li><a [routerLink]="['/page2/page3', 42]">Page 3</a></li>
+</ul>
 <div class="container">
   <div class="row">
     <table class="striped">
       <thead>
         <tr>
-          <th>Id</th>
           <th>Title</th>
           <th (click)="isLongDescriptionDisplayed = !isLongDescriptionDisplayed">Description</th>
           <th *ngIf="isLongDescriptionDisplayed">Long Description</th>
           <th>Price</th>
-          <th>Category</th>
-          <th>State</th>
-          <th>inStock</th>
         </tr>
       </thead>
       <tbody>
@@ -36,24 +36,20 @@
         <!-- [] => Directive attributes ==> !!!dynamique -->
         <!-- () => Directive d'évenement -->
         <ng-container *ngFor="let product of products">
-          <tr *ngIf="product.inStock; else notInStock" [class]="{'new': product.state == 1}">
+          <tr *ngIf="product.inStock; else notInStock" [class]="{'new': product.state == 1}" [routerLink]="['/page2/page3', product.id]">
             <!-- {{}} => binding One-Way -->
             <!-- ([ngModel]) => binding Two-Way -->
             <!-- #xxx => binding local -->
-            <td>{{ product.id }}</td>
             <td>{{ product.title }}</td>
             <td>{{ product.shortDescription }}</td>
             <td *ngIf="isLongDescriptionDisplayed">{{ product.longDescription}}</td>
             <td>{{ product.price | currency:'2.0-2':'€' }}</td>
-            <td>{{ product.category | categories }}</td>
-            <td>{{ product.state | states }}</td>
-            <td>{{ product.inStock }}</td>
           </tr>
           <ng-template #notInStock>
             <tr [style.color]="product.state == 1 ? 'blue': 'red'">
               <td>{{ product.id }}</td>
               <td>{{ product.title }}</td>
-              <td colspan="5" style="align-content: center;">Pas en stock</td>
+              <td colspan="2" style="align-content: center;">Pas en stock</td>
             </tr>
           </ng-template>
         </ng-container>        
@@ -61,3 +57,5 @@
     </table>
   </div>
 </div>
+
+<router-outlet></router-outlet>

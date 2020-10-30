@@ -1,0 +1,9 @@
+
+<nav class="container">
+    <div class="nav-wrapper">
+        <div class="col s12">
+            <a [routerLink]="['/']" href="#!" class="breadcrumb">Home</a>
+            <a *ngFor="let link of links"  href="#!" [routerLink]="[link.path]" class="breadcrumb">{{ link.label }}</a>
+        </div>
+    </div>
+</nav>
