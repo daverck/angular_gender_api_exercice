@@ -8,8 +8,6 @@ import { MCarouselDirective } from './directives/m-carousel.directive';
 import { CategoriesPipe } from './pipes/categories.pipe';
 import { StatesPipe } from './pipes/states.pipe';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
-import { Page2Component } from './components/page2/page2.component';
-import { Page3Component } from './components/page3/page3.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +17,6 @@ import { Page3Component } from './components/page3/page3.component';
     CategoriesPipe,
     StatesPipe,
     BreadcrumbsComponent,
-    Page2Component,
-    Page3Component
   ],
   imports: [
     BrowserModule,
