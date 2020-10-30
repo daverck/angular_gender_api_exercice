@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MCollapsibleDirective } from './directives/m-collapsible.directive';
 import { MCarouselDirective } from './directives/m-carousel.directive';
+import { CategoriesPipe } from './pipes/categories.pipe';
+import { StatesPipe } from './pipes/states.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     MCollapsibleDirective,
-    MCarouselDirective
+    MCarouselDirective,
+    CategoriesPipe,
+    StatesPipe
   ],
   imports: [
     BrowserModule,

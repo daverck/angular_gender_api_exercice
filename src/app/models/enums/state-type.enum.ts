@@ -1,5 +1,5 @@
 export enum StateType {
-    NEW = 1,
-    OCCASION = 2,
-    ABIME = 3
+    New = 1,
+    Occasion = 2,
+    Abime = 3
 }
