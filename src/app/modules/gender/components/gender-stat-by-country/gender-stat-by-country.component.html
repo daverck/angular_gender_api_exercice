@@ -1,0 +1,23 @@
+<!-- <p>gender-stat-by-country works!</p> -->
+
+
+<div class="container">
+    <!-- <router-outlet></router-outlet> -->
+    <app-country-select (selectValueEvent)="country_id = $event; "></app-country-select>
+
+    <label  for="firstname">Firstname : </label>
+    <input #firstname type="text" name="firstname" id="firstname">
+
+    <button (click)="search()">Search</button>
+
+    <p *ngIf="model != null"><span>{{model.gender}}</span> with <span>{{model.probability | percent }} probability</span></p> 
+    
+    <div class="progress">
+        <div #progressBar class="determinate" [ngStyle]="{'width': model.probability*100+'%', 'background-color': model.gender == 'male' ? 'blue': 'red'}"></div>
+        <div #progressBar class="determinate" style="width: 70%"></div>
+    </div>
+
+    
+</div>
+
+

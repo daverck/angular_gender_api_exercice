@@ -1,1 +1,8 @@
 <p appHighlight>demo2 works!</p>
+<div *ngIf="model != null">
+    <p>Température : {{model.main.temp}}°C</p>
+    <p>Température minimum : {{model.main.temp_min}}°C</p>
+    <p>Ville : {{model.name}}</p>
+    <!-- <img src="http://openweathermap.org/img/wn/{{model.weather[0].icon}}@4x.png" alt=""> -->
+    <img src="{{ model.weather[0].icon | toImageOW : 2 }}" alt="">
+</div>

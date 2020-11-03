@@ -1,0 +1,8 @@
+
+<!-- <div class="container"> -->
+    <!-- <div *ngIf="model != null"></div> -->
+    <label for="country-select">Country select</label>
+    <select #selectC name="country-select">
+        <option *ngFor="let c of model" >{{c.name}}</option>
+    </select>
+<!-- </div> -->

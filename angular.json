@@ -126,6 +126,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "TechnobelFEAngular2"
+    }
+  },
+  "defaultProject": "TechnobelFEAngular2",
+  "cli": {
+    "analytics": "efcadfe4-e28c-4835-b273-a57df29d8a5a"
+  }
 }
