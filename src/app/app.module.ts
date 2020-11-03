@@ -10,6 +10,8 @@ import { StatesPipe } from './pipes/states.pipe';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AboutComponent } from './components/about/about.component';
+import { DemoModule } from './modules/demo/demo.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     StatesPipe,
     BreadcrumbsComponent,
     MenuComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

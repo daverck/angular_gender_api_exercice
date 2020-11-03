@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AboutComponent } from './components/about/about.component';
 
 
 export const APP_ROUTING: Routes = [
-  {path: 'product', data: {breadCrumb: "Product"}, loadChildren: () => import("./modules/product/product.module").then(m => m.ProductModule)}
+  { path: 'about', component: AboutComponent },
+  { path: 'product', data: {breadCrumb: "Product"}, loadChildren: () => import("./modules/product/product.module").then(m => m.ProductModule)},
+  { path: 'demo', loadChildren: () => import('./modules/demo/demo.module').then(m => m.DemoModule) }
 ];
 
 @NgModule({
