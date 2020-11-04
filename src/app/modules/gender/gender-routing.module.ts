@@ -6,9 +6,8 @@ import { CountryResolver } from './resolvers/country.resolver';
 
 
 const routes: Routes = [
-  { path: '', component: GenderStatByCountryComponent, children: [
-    { path: 'select', component: CountrySelectComponent, resolve: {model: CountryResolver} }
-  ] },
+  { path: '', component: GenderStatByCountryComponent, resolve: {countryModel: CountryResolver}, children: [] },
+  { path: 'select', component: CountrySelectComponent, resolve: {countryModel: CountryResolver} }
 ];
 
 @NgModule({

@@ -1,4 +1,4 @@
-export interface ContriesJsonModel {
+export interface CountriesJsonModel {
   name: string;
   topLevelDomain: string[];
   alpha2Code: string;
